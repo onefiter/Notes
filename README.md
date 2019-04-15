@@ -5,4 +5,4 @@
 
 ## PHP基础学习
 
-[字符串](./php/string.md)
+[字符串](./PHP/string.md)
