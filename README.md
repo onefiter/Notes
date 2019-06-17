@@ -9,3 +9,12 @@
 
 ## PHP面试
 [基本概念](./PHP/interview/concept.md)
+
+CGI、FastCGI、PHP-CGI、PHP-FPM的关系
+CGI：Common Gateway Interface（通用网管协议）
+FastCGI：基于CGI的增强版本的协议
+PHP-CGI：PHP实现的CGI进程管理器
+PHP-FPM：PHP实现的FastCGI Process Manager(FastCGI进程管理器），用于替换PHP FastCGI的大部分附加功能，适用于高负载网站。
+
+
+
