@@ -28,5 +28,8 @@ $array4 = array(5, 6, 7, 8, 9);
 // $ret7 = array_merge($array3, array());
 // print_r($ret7);
 
-$ret8 = array_merge($array3, null);
-print_r($ret8);
+// $ret8 = array_merge($array3, null);
+// print_r($ret8);
+
+$ret9 = array_merge($array2, array());
+print_r($ret9);
