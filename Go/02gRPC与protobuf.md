@@ -52,7 +52,7 @@ message Trip {
 }
 ```
 cd 到proto编写的文件的文件夹，执行命令
-` protoc -I . --go_out=paths=source_relative:gen/go`
+` protoc -I . --go_out=paths=source_relative:gen/go trip.proto`
 
 简单测试`proto` 
 
