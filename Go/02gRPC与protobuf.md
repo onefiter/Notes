@@ -26,11 +26,29 @@ syntax = "proto3";
 package coolcar;
 option go_package="coolcar/proto/gen/go;trippb";
 
+message Location {
+    double latitude = 1;
+    double longitude = 2;
+}
+
+enum TripStatus {
+    TS_NOT_SPECIFIED = 0;
+    NOT_STARTED = 1;
+    IN_PROGRESS = 2;
+    FINISHED = 3;
+    PAID = 4;
+}
+
 message Trip {
     string start = 1;
+    Location start_pos = 5;
+    Location end_pos = 6;
+    repeated Location path_locations = 7;
     string end = 2;
     int64 duration_sec = 3;
     int64 fee_cent = 4;
+    TripStatus status = 8;
+
 }
 ```
 cd 到proto编写的文件的文件夹，执行命令
@@ -56,6 +74,25 @@ func main() {
 		End:         "def",
 		DurationSec: 3600,
 		FeeCent:     10000,
+		StartPos: &trippb.Location{
+			Latitude:  30,
+			Longitude: 120,
+		},
+		EndPos: &trippb.Location{
+			Latitude:  35,
+			Longitude: 115,
+		},
+		PathLocations: []*trippb.Location{
+			{
+				Latitude:  31,
+				Longitude: 119,
+			},
+			{
+				Latitude:  32,
+				Longitude: 118,
+			},
+		},
+		Status: trippb.TripStatus_IN_PROGRESS,
 	}
 	fmt.Println(&trip)
 	b, err := proto.Marshal(&trip)
@@ -81,6 +118,5 @@ func main() {
 	}
 	fmt.Printf("%s\n", b)
 }
-
 ```
 
