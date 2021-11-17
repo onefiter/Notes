@@ -48,6 +48,8 @@ message Trip {
     int64 duration_sec = 3;
     int64 fee_cent = 4;
     TripStatus status = 8;
+    bool isPromotionTrip = 9;
+    bool isFromGuestUser = 10;
 
 }
 ```
