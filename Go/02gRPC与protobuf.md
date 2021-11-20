@@ -15,7 +15,7 @@
 >win10的环境变量，将环境变量指定到`../bin`下
 
 
-然后安装[https://github.com/grpc-ecosystem/grpc-gateway](https://github.com/grpc-ecosystem/grpc-gateway),本案例使用的是`
+然后安装[https://github.com/grpc-ecosystem/grpc-gateway](https://github.com/grpc-ecosystem/grpc-gateway),本案例使用的是
 
 ```shell
 go  get  github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-grpc-gateway  github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2 google.golang.org/protobuf/cmd/protoc-gen-go  google.golang.org/grpc/cmd/protoc-gen-go-grpc
