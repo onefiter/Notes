@@ -122,3 +122,8 @@ func main() {
 }
 ```
 
+> 生成`gateway`
+```shell
+protoc -I . --grpc-gateway_out=paths=source_relative,grpc_api_configuration=trip.yaml:gen/go trip.proto
+```
+
