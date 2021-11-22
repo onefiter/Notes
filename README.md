@@ -16,5 +16,13 @@ FastCGI：基于CGI的增强版本的协议
 PHP-CGI：PHP实现的CGI进程管理器
 PHP-FPM：PHP实现的FastCGI Process Manager(FastCGI进程管理器），用于替换PHP FastCGI的大部分附加功能，适用于高负载网站。
 
+## PHP配置相关
+> 查找`php.ini`文件,执行`php -ini`或`php -i | grep "Loaded Configuration File"`命令，推荐后者
 
 
+xdebug报错,函数嵌套层级>50
+```shell
+PHP Fatal error:  Uncaught Error: Maximum function nesting level of '50' reached, aborting!
+```
+
+需要注释 `;xdebug.max_nesting_level=50`
