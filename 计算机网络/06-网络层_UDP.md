@@ -13,7 +13,7 @@
 
 
 ## UDP报文格式
-![UDP报文格式](E:\workspace\Notes\assets\UDP报文格式.png)
+![UDP报文格式](../assets/UDP报文格式.png)
 
 ## UDP特点
 
